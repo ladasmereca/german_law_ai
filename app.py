@@ -87,7 +87,7 @@ translations = {
         "key_label": "Geben Sie Ihren Mistral API-Key ein",
         "key_info": "Bitte fügen Sie Ihren Mistral API-Key hinzu, um fortzufahren.",
         "placeholder": "Stellen Sie eine Frage...",
-        "footer":'Entwickelt von Lada S. | <a class="footer-link" href="https://github.com/">GitHub Repo</a><br>' \
+        "footer":'Entwickelt von Lada S. | <a class="footer-link" href="https://github.com/ladasmereca/german_law_ai">GitHub Repo</a><br>' \
                 'KI-Unterstützung durch <a class="footer-link" href="https://mistral.ai">Mistral</a><br>' \
                 'Datenbankunterstützung durch <a class="footer-link" href="https://qdrant.io">Qdrant</a><br>' \
                 'Gesetze übernommen von <a class="footer-link" href="https://www.gesetze-im-internet.de/">Gesetze-in-Internet.de</a>'
@@ -100,7 +100,7 @@ translations = {
         "key_label": "Wprowadź swój Mistral API-Key",
         "key_info": "Aby kontynuować, dodacj swój Mistral API-key.",
         "placeholder": "Zadaj pytanie...",
-        "footer":'Opracowane przez Lada S. | <a class="footer-link" href="https://github.com/">GitHub Repo</a><br>' \
+        "footer":'Opracowane przez Lada S. | <a class="footer-link" href="https://github.com/ladasmereca/german_law_ai">GitHub Repo</a><br>' \
                 'AI oparta na <a class="footer-link" href="https://mistral.ai">Mistral</a><br>' \
                 'Baza danych oparta na <a class="footer-link" href="https://qdrant.io">Qdrant</a><br>' \
                 'Przepisy prawne zaczerpnięte z <a class="footer-link" href="https://www.gesetze-im-internet.de/">Gesetze-in-Internet.de</a>'
@@ -113,7 +113,7 @@ translations = {
         "key_label": "Mistral API Anahtarınızı girin",
         "key_info": "Devam etmek için lütfen Mistral API anahtarınızı ekleyin.",
         "placeholder": "Bir soru sorun...",
-        "footer":'Lada S. tarafından geliştirilmiştir | <a class="footer-link" href="https://github.com/">GitHub Repo</a><br>' \
+        "footer":'Lada S. tarafından geliştirilmiştir | <a class="footer-link" href="https://github.com/ladasmereca/german_law_ai">GitHub Repo</a><br>' \
                 'AI tarafından desteklenmektedir <a class="footer-link" href="https://mistral.ai">Mistral</a><br>' \
                 'Veritabanı tarafından desteklenmektedir <a class="footer-link" href="https://qdrant.io">Qdrant</a><br>' \
                 'Yasalar adresinden alınmıştır <a class="footer-link" href="https://www.gesetze-im-internet.de/">Gesetze-in-Internet.de</a>'
@@ -126,7 +126,7 @@ translations = {
         "key_label": "Введіть Mistral API-ключ",
         "key_info": "Для продовження, додайте Mistral API-ключ.",
         "placeholder": "Задайте питання...",
-        "footer":'Розроблено Lada S. | <a class="footer-link" href="https://github.com/">GitHub Repo</a><br>' \
+        "footer":'Розроблено Lada S. | <a class="footer-link" href="https://github.com/ladasmereca/german_law_ai">GitHub Repo</a><br>' \
                 'AI на базі <a class="footer-link" href="https://mistral.ai">Mistral</a><br>' \
                 'База даних на базі <a class="footer-link" href="https://qdrant.io">Qdrant</a><br>' \
                 'Закони взяті з <a class="footer-link" href="https://www.gesetze-im-internet.de/">Gesetze-in-Internet.de</a>'
@@ -139,7 +139,7 @@ translations = {
         "key_label": "Introduceți cheia API Mistral",
         "key_info": "Adăugați cheia API Mistral pentru a continua.",
         "placeholder": "Puneți o întrebare...",
-        "footer":'Dezvoltat de Lada S. | <a class="footer-link" href="https://github.com/">GitHub Repo</a><br>' \
+        "footer":'Dezvoltat de Lada S. | <a class="footer-link" href="https://github.com/ladasmereca/german_law_ai">GitHub Repo</a><br>' \
                 'AI alimentat de <a class="footer-link" href="https://mistral.ai">Mistral</a><br>' \
                 'Baza de date alimentată de <a class="footer-link" href="https://qdrant.io">Qdrant</a><br>' \
                 'Legi preluate de pe <a class="footer-link" href="https://www.gesetze-im-internet.de/">Gesetze-in-Internet.de</a>'
@@ -152,7 +152,7 @@ translations = {
         "key_label": "أدخل مفتاح API Mistral الخاص بك",
         "key_info": "يرجى إضافة مفتاح API Mistral الخاص بك للمتابعة.",
         "placeholder": "اطرح سؤالاً...",
-        "footer":'Lada S. تم تطويره بواسطة | <a class="footer-link" href="https://github.com/">GitHub Repo</a><br>' \
+        "footer":'Lada S. تم تطويره بواسطة | <a class="footer-link" href="https://github.com/ladasmereca/german_law_ai">GitHub Repo</a><br>' \
                 'الذكاء الاصطناعي مدعوم من <a class="footer-link" href="https://mistral.ai">Mistral</a><br>' \
                 'قاعدة البيانات مدعومة من <a class="footer-link" href="https://qdrant.io">Qdrant</a><br>' \
                 'القوانين مأخوذة من <a class="footer-link" href="https://www.gesetze-im-internet.de/">Gesetze-in-Internet.de</a>'
@@ -165,7 +165,7 @@ translations = {
         "key_label": "Введите Mistral API-ключ",
         "key_info": "Для продолжения, добавьте Mistral API-ключ.",
         "placeholder": "Задайте вопрос...",
-        "footer": 'Разработан Lada S. | <a class="footer-link" href="https://github.com/">GitHub Repo</a><br>' \
+        "footer": 'Разработан Lada S. | <a class="footer-link" href="https://github.com/ladasmereca/german_law_ai">GitHub Repo</a><br>' \
                 'AI на базе <a class="footer-link" href="https://mistral.ai">Mistral</a><br>' \
                 'База данных на базе <a class="footer-link" href="https://qdrant.io">Qdrant</a><br>' \
                 'Законы взяты из <a class="footer-link" href="https://www.gesetze-im-internet.de/">Gesetze-in-Internet.de</a>'
