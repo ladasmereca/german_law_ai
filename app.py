@@ -29,7 +29,7 @@ st.markdown("""
         background-color: #2C2621 !important;
     }
 
-    /* 5. Sidebar - Text & Headers (Fixes the Blue 'Settings' text) */
+    /* 5. Sidebar - Text & Headers */
     section[data-testid="stSidebar"] h1, 
     section[data-testid="stSidebar"] h2, 
     section[data-testid="stSidebar"] h3,
@@ -39,13 +39,13 @@ st.markdown("""
         color: #E6D5B8 !important;
     }
 
-    /* 6. Sidebar - Expander Headers (Specifically targeting the clickable text) */
+    /* 6. Sidebar - Expander Headers (Specifically clickable text) */
     section[data-testid="stSidebar"] details summary span p {
         color: #E6D5B8 !important;
     }
 
     section[data-testid="stSidebar"] details summary svg {
-        fill: #E6D5B8 !important; /* Makes the little arrow icon cream colored too */
+        fill: #E6D5B8 !important; 
     }
 
     /* 7. Main Title Header (Center Page) */
@@ -206,7 +206,7 @@ with st.sidebar:
             """)
 
     with st.expander("Found a Bug? / Suggestion?"):
-        st.link_button("Submit Feedback", "https://tally.so/r/your-link")
+        st.link_button("Submit Feedback", "https://tally.so/r/BzkNj7")
 
     st.markdown("---")
     st.markdown(f"<div style='font-size: 12px; color: #E6D5B8;'>{t['footer']}</div>", unsafe_allow_html=True)
@@ -220,8 +220,32 @@ if not user_mistral_key:
     st.stop()
 
 # 4. Chat Interface
-if "messages" not in st.session_state:
+if "current_lang" not in st.session_state:
+    st.session_state.current_lang = selected_lang
+
+if st.session_state.current_lang != selected_lang:
     st.session_state.messages = []
+    st.session_state.current_lang = selected_lang
+
+# Initial message
+if not st.session_state.messages:
+    welcome_msg = "Guten Tag! I am your German Law Assistant. How can I help you navigate the law today?"
+    if selected_lang == "German":
+        welcome_msg = "Guten Tag! Ich bin Ihr Assistent für deutsches Recht. Wie kann ich Ihnen heute im Gesetz helfen?"
+    elif selected_lang == "Polish":
+        welcome_msg = "Witaj! Jestem Twoim asystentem dla prawołów niemieckich. Jak mogę Ci pomóc dzisiaj z prawami?"
+    elif selected_lang == "Turkish":
+        welcome_msg = "Merhaba! Ben Alman hukuku konusunda asistanınızım. Bugün size hukukla ilgili nasıl yardımcı olabilirim?"
+    elif selected_lang == "Ukrainian":
+        welcome_msg = "Вітаю! Я ваш помічник з питань німецького права. Чим я можу допомогти вам із законом сьогодні?"
+    elif selected_lang == "Romanian":
+        welcome_msg = "Bună! Sunt asistentul dumneavoastră pentru drept german. Cum vă pot ajuta cu dreptul astăzi?"
+    elif selected_lang == "Arabic":
+        welcome_msg = "مرحباً! أنا مساعدك المختص بالقانون الألماني. كيف يمكنني مساعدتك في الأمور القانونية اليوم؟"
+    elif selected_lang == "Russian":
+        welcome_msg = "Привет! Я Ваш ассистент по немецкому законодательству. Как могу помочь вам сегодня с законами?"
+    
+    st.session_state.messages.append({"role": "assistant", "content": welcome_msg})
 
 # 5. Display chat history
 for message in st.session_state.messages:
