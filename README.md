@@ -15,7 +15,7 @@ A multilingual RAG (Retrieval-Augmented Generation) application that simplifies 
 - **Data Source:** [Gesetze-im-Internet.de](https://www.gesetze-im-internet.de/)
 
 ### How to use
-1. Visit the [Live Demo](YOUR_STREAMLIT_LINK_LATER).
+1. Visit the [Live Demo](https://german-law-ai.streamlit.app/).
 2. Enter your own **Mistral API Key** in the sidebar.
 3. Select your preferred explanation language.
 4. Ask a question (e.g., "At what age do I become an adult in Germany?").
