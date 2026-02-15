@@ -74,7 +74,7 @@ translations = {
         "key_label": "Enter your Mistral API-Key",
         "key_info": "Please add your Mistral API-key to continue.",
         "placeholder": "Ask a question...",
-        "footer":'Developed by Lada S. | <a class="footer-link" href="https://github.com/">GitHub Repo</a><br>' \
+        "footer":'Developed by Lada S. | <a class="footer-link" href="https://github.com/ladasmereca/german_law_ai">GitHub Repo</a><br>' \
                 'AI Powered by <a class="footer-link" href="https://mistral.ai">Mistral</a><br>' \
                 'Database Powered by <a class="footer-link" href="https://qdrant.io">Qdrant</a><br>' \
                 'Laws taken from <a class="footer-link" href="https://www.gesetze-im-internet.de/">Gesetze-in-Internet.de</a>'
