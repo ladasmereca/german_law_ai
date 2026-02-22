@@ -220,6 +220,9 @@ if not user_mistral_key:
     st.stop()
 
 # 4. Chat Interface
+if "messages" not in st.session_state:
+    st.session_state.messages = []
+
 if "current_lang" not in st.session_state:
     st.session_state.current_lang = selected_lang
 
@@ -228,12 +231,12 @@ if st.session_state.current_lang != selected_lang:
     st.session_state.current_lang = selected_lang
 
 # Initial message
-if not st.session_state.messages:
+if len(st.session_state.messages) == 0:
     welcome_msg = "Guten Tag! I am your German Law Assistant. How can I help you navigate the law today?"
     if selected_lang == "German":
         welcome_msg = "Guten Tag! Ich bin Ihr Assistent für deutsches Recht. Wie kann ich Ihnen heute im Gesetz helfen?"
     elif selected_lang == "Polish":
-        welcome_msg = "Witaj! Jestem Twoim asystentem dla prawołów niemieckich. Jak mogę Ci pomóc dzisiaj z prawami?"
+        welcome_msg = "Witaj! Jestem Twoim asystentem ds. prawa niemieckiego. Jak mogę Ci pomóc dzisiaj z prawami?"
     elif selected_lang == "Turkish":
         welcome_msg = "Merhaba! Ben Alman hukuku konusunda asistanınızım. Bugün size hukukla ilgili nasıl yardımcı olabilirim?"
     elif selected_lang == "Ukrainian":

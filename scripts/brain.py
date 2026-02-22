@@ -26,7 +26,7 @@ def ask_legal_bot(question, user_api_key, language):
     search_results = qdrant_client.query_points(
         collection_name="german_laws",
         query=query_vector,
-        limit=3
+        limit=5
     ).points
 
     # Check if the best result is a good match
@@ -35,22 +35,31 @@ def ask_legal_bot(question, user_api_key, language):
 
     # 3. Extract text from search results
     context = ""
+    found_law_names = set()
     for res in search_results:
-        context += f"\n Law: {res.payload['id']} ({res.payload['title']}): {res.payload['text']}\n"
+        law_title = res.payload.get('title', 'Unknown Law')
+        law_id = res.payload.get('id', 'N/A')
+        law_text = res.payload.get('text', '')
+        context += f"\n Law: {law_id} ({law_title}): {law_text}\n"
+        found_law_names.add(law_title)
+
+    library_content = ", ".join(found_law_names) if found_law_names else "no verified laws"
 
     # 4. Create Prompt
     prompt = f"""
-    ROLE: Specialized legal assistant for the German Law.
+    ROLE: You are a specialized legal assistant for the German Law.
     You have access to a verified database of German laws.
     
+    CURRENT LIBRARY CONTENT: {library_content}
     CONTEXT FROM DATABASE: {context}
     USER QUESTION: {question}
 
     STRICT RULES:
     - Answer strictly in {language}.
     - Keep law titles in German (e.g., '§ 433 BGB Vertragstypische Pflichten beim Kaufvertrag'). Always base your answer on the law.
-    - If the question is outside of German law, explain the {context} range and that you cannot answer questions outside of German law. 
-    - If it is about German law, but you can't find any corresponding laws in {context}, explain it to the user.
+    - If the question is outside of German law, explain that your current library only covers {library_content} and that you cannot answer questions outside of German law. 
+    - If it is about German law, but you can't find any corresponding laws in the provided CONTEXT, explain to the user that your current database ({library_content}) does not contain the specific information needed to answer.
+    - DO NOT use outside knowledge or hallucinate facts about laws not present in the CONTEXT.
     - Answer in {language} - this is the language of the user.
     - Style: Simple (ELI5), no emojis.
     """
